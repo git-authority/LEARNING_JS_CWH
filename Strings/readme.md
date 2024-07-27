@@ -206,3 +206,47 @@ Pre Defined Functions:
 
                 Hello
 
+
+
+            > includes(): Checks if a string contains another string.
+
+
+                Example:
+
+
+                let str = "Hello, world!";
+                console.log(str.includes("world"));
+
+                Output:
+
+                true
+
+
+
+            > startsWith(): Checks if a string starts with another string.
+
+
+                Example:
+
+
+                let str = "Hello, world!";
+                console.log(str.startsWith("He"));
+
+
+                Output:
+
+                true
+
+
+            > endsWith(): Checks if a string ends with another string.
+
+
+                Example:
+
+                let str = "Hello, world!";
+                console.log(str.endsWith("!"));
+
+
+                Output:
+
+                true

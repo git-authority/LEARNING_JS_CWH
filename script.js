@@ -1,4 +1,3 @@
 
-
 let str = "Hello, world!";
-console.log(str.substring(2));
+console.log(str.endsWith("!"));
