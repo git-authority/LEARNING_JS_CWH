@@ -94,3 +94,115 @@ Pre Defined Functions:
             Output:
 
             Abhrc   ( not abhrc )
+
+
+
+        > .concat()
+
+            Example 1:
+
+            let a = "Abhra";
+            let b = "Ray";
+            console.log(a.concat(b));
+
+            Output:
+
+            AbhraRay
+
+
+
+
+            Example 2:
+
+            let a = "Abhra";
+            let b = "Ray";
+            console.log(a.concat("snata", " ", b));     // can concat any number of strings given.
+
+            Output:
+
+            Abhrasnata Ray
+
+
+
+            > .trim()
+
+                It removes whitespace before and after the string and not in between.
+
+                Example:
+
+
+                let a = "     Abhra     Ray         ";
+                console.log(a);
+                console.log(a.trim());
+
+                Output:
+
+                Abhra     Ray           // it has no blankspace before and after the string.
+
+
+            > charAt()
+
+                Example:
+
+
+                let a = "Abhra";
+                console.log(a.charAt(2));
+
+                Output:
+
+                h
+
+
+
+            > indexOf(): Returns the index of the first occurrence of a specified value in a string.
+
+
+                Example:
+
+                let str = "Hello, world!";
+                console.log(str.indexOf("world"));
+
+
+                Output:
+
+                7
+
+            > lastIndexOf(): Returns the index of the last occurrence of a specified value in a string.
+
+
+                Example:
+
+
+                let str = "Hello, world!";
+                console.log(str.lastIndexOf("world"));
+
+
+                Output:
+
+            > replace()
+
+
+                Example:
+
+                let str = "Hello, world!";
+                let newStr = str.replace("world", "JavaScript");
+                console.log(newStr);
+
+                Output:
+
+                Hello, JavaScript!
+
+
+
+            > substring()
+
+                Example:
+
+                let str = "Hello, world!";
+                console.log(str.substring(0, 5));
+
+
+                Output:
+
+                Hello
+

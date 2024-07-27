@@ -1,3 +1,4 @@
 
-let a = "Abhra";
-console.log(a.replace('a','c'));
+
+let str = "Hello, world!";
+console.log(str.substring(2));
