@@ -1,3 +1,3 @@
-let a = "Abhra";
 
-console.log(a.toLowerCase());
+let a = "Abhra";
+console.log(a.replace('a','c'));

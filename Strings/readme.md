@@ -50,7 +50,7 @@ Pre Defined Functions:
         let a = "Abhra";
         console.log(a.toUpperCase());
 
-    Output:
+        Output:
 
         ABHRA
 
@@ -60,6 +60,37 @@ Pre Defined Functions:
         let a = "Abhra";
         console.log(a.toLowerCase());
 
-    Output:
+        Output:
 
         abhra
+
+
+    > .slice()
+
+        Example 1:
+
+        let a = "Abhra";
+        console.log(a.slice(2,4));      // does not include the character at 4th index but starts from 2nd index.
+
+        Output:
+
+        hr
+
+        Example 2:
+
+        let a = "Abhra";
+        console.log(a.slice(2));        // prints string starting from 2nd incex.
+
+        Output:
+
+        hra
+
+
+        > .replace()
+
+            let a = "Abhra";
+            console.log(a.replace('a','c'));        // note that it only replaces the character or string of the first occurence
+
+            Output:
+
+            Abhrc   ( not abhrc )
