@@ -179,6 +179,8 @@ Pre Defined Functions:
 
                 Output:
 
+                7
+
             > replace()
 
 
