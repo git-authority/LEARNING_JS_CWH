@@ -1,5 +1,5 @@
-let fruits = ["apple", "banana", "cherry"];
-for (let fruit of fruits)
-{
-    console.log(fruit);
+function myName(){
+    console.log("My name is Abhrasnata Ray");
 }
+
+myName();
