@@ -157,6 +157,7 @@
           fruits.unshift(5 , "Orange");
           console.log(fruits);
 
+    const sum = numbers.reduce((acc, x) => acc + x, 0);
 
           Output: [ 5, 'Orange', 'Banana', 'Mango' ]
 
