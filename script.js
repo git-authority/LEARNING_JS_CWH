@@ -1,4 +1,3 @@
-let fruits = ["Apple", "Banana", "Mango"];
-        delete fruits[1];
-        console.log(fruits);
-        console.log(fruits.length);
+let fruits = ["Banana", "Orange"];
+fruits.splice(1, 1, "Apple", "Mango");
+console.log(fruits);

@@ -173,3 +173,156 @@ Array Methods:
         3
 
 
+        8. concat():
+
+        Example 1:
+
+        let teamA = ["Alice", "Bob"];
+        let teamB = ["Charlie", "David"];
+        let teamC = ["Eve", "Frank"];
+        let allTeams = teamA.concat(teamB, teamC);
+
+        console.log(allTeams);
+
+
+        Output: [ 'Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank' ]
+
+
+        Example 2: Concatenating Arrays with Values.
+
+        let numbers = [1, 2, 3];
+        let moreNumbers = numbers.concat(4, 5, [6, 7]);
+
+        console.log(moreNumbers);
+
+
+        Output:  [1, 2, 3, 4, 5, 6, 7]
+
+
+
+        9. sort(): Sorts the elements of an array in place and returns the sorted array. By default, it sorts the elements as strings in ascending order.
+
+        Example 1:
+
+        let fruits = ["Banana", "Apple", "Mango", "Orange"];
+        fruits.sort();
+        console.log(fruits);
+
+
+        Output:  ["Apple", "Banana", "Mango", "Orange"]
+
+
+
+        Example 2:
+
+
+        let numbers = [4, 2, 5, 1, 3];
+        numbers.sort();
+        console.log(numbers);
+
+
+        Output: [1, 2, 3, 4, 5]
+
+
+        10. splice(): Changes the contents of an array by removing, replacing, or adding elements. It modifies the original array.
+
+
+        Example 1: Removing elements
+
+        let fruits = ["Banana", "Apple", "Mango", "Orange"];
+        fruits.splice(1, 2);
+        console.log(fruits);
+
+
+        Output: [ 'Banana', 'Orange' ]
+
+
+
+        Example 2: Adding elements
+
+
+        let fruits = ["Banana", "Orange"];
+        fruits.splice(1, 0, "Apple", "Mango");
+        console.log(fruits);
+
+        Output: ["Banana", "Apple", "Mango", "Orange"]
+
+
+        Explanation of the above:
+
+        1: The index at which to start adding the new elements.
+        0: Indicates that no elements should be removed.
+        "Apple", "Mango": The elements to add to the array.
+
+
+        One more example for adding elements:
+
+        let fruits = ["Banana", "Orange"];
+        fruits.splice(1, 1, "Apple", "Mango");
+        console.log(fruits);
+
+
+        Output: [ 'Banana', 'Apple', 'Mango' ]
+
+
+        Explanation:
+
+        1: The index at which to start adding the new elements.
+        1: Indicates that one element, i.e, "Orange" should be removed.
+        "Apple", "Mango": The elements to add to the array.
+
+
+        Example 3: Replacing elements
+
+        let fruits = ["Banana", "Apple", "Mango", "Orange"];
+        fruits.splice(1, 2, "Grapes", "Pineapple");
+        console.log(fruits);
+
+        Output: ["Banana", "Grapes", "Pineapple", "Orange"]
+
+        Explanation:
+
+        1: The index at which to start changing the array.
+        2: The number of elements to remove from the array, starting at index 1.
+        "Grapes", "Pineapple": The elements to add to the array, beginning at the start index. If no elements are provided, splice() simply removes the specified elements.
+
+
+
+        11. slice() method returns a shallow copy of a portion of an array into a new array object. It does not modify the original array.
+
+
+        Example 1:
+
+        let fruits = ["Banana", "Apple", "Mango", "Orange"];
+        fruits.slice(2, 4);
+        console.log(fruits);
+
+
+        Output: ["Banana", "Apple", "Mango", "Orange"]
+
+
+        Explanation:
+
+        2: The index at which to begin extraction. The default is 0.
+        4: The index at which to end extraction. The default is the array's length. The extraction does not include 4th index.
+
+
+        Example 2: Copying the entire array.
+
+        let fruits = ["Banana", "Apple", "Mango", "Orange"];
+        let allFruits = fruits.slice();
+        console.log(allFruits);
+
+        Output: ["Banana", "Apple", "Mango", "Orange"]
+
+
+        12. reverse()
+
+
+        Example:
+
+        let fruits = ["Banana", "Apple", "Mango", "Orange"];
+        fruits.reverse();
+        console.log(fruits);
+
+        Output: ["Orange", "Mango", "Apple", "Banana"]
