@@ -1,5 +1,11 @@
-let arr = [1,2,3,4];
+function showConfirm() {
+    // Display a confirmation dialog
+    let userResponse = confirm("Do you want to proceed?");
 
-    let prod = arr.reduce((acc, x) => acc*x, 1);
-
-    console.log(prod);
+    // Check the user's response
+    if (userResponse) {
+        alert("You clicked OK!");
+    } else {
+        alert("You clicked Cancel!");
+    }
+}
