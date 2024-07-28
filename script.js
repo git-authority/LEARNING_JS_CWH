@@ -1,3 +1,5 @@
-let fruits = ["Banana", "Orange"];
-fruits.splice(1, 1, "Apple", "Mango");
-console.log(fruits);
+let arr = [1,2,3,4];
+
+    let prod = arr.reduce((acc, x) => acc*x, 1);
+
+    console.log(prod);
