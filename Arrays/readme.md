@@ -1,328 +1,334 @@
-Declaration:
+  ## Declaration:
 
-    let a = [1,2,3,4,5];
-    console.log(a.length);
+      let a = [1,2,3,4,5];
+      console.log(a.length);
 
-    Output: 5
+      Output: 5
 
+  ###
 
+      Accessing Array Elements:
 
-    Accessing Array Elements:
 
+      console.log(a[2]);
 
-    console.log(a[2]);
+      Output: 3
 
-    Output: 3
 
+  #### Note that typeof an array is an object.
 
-Note that typeof an array is an object.
+      Example:
 
-    Example:
+      let a = [1,2,3,4,5];
+      console.log(typeof(a));
 
-    let a = [1,2,3,4,5];
-    console.log(typeof(a));
+      Output: object
 
-    Output: object
 
+  ## Changing value of arrays:
 
-Changing value of arrays:
 
+  Strings are immutable, arrays are mutable.
+  In case of arrays we can change the value of arrays, but in case of strings it it not possible.
 
-    Strings are immutable, arrays are mutable.
-    In case of arrays we can change the value of arrays, but in case of strings it it not possible.
+  ###
 
-    Example 1:
+      Example 1:
 
-    let a = [1,2,3,4,5];
+      let a = [1,2,3,4,5];
 
-    a[0] = 100;
+      a[0] = 100;
 
 
-    console.log(a);
+      console.log(a);
 
 
-    Output: [ 100, 2, 3, 4, 5 ]
+      Output: [ 100, 2, 3, 4, 5 ]
 
+  ###
 
+      Example 2:
 
-    Example 2:
+      let a = "Abhra";
 
-    let a = "Abhra";
+      a[0] = 100;
 
-    a[0] = 100;
+      console.log(a);
 
-    console.log(a);
+      Output: Abhra
 
-    Output: Abhra
 
+      This was possible because arrays are mutable but strings are immutable.
 
-    This was possible because arrays are mutable but strings are immutable.
+  #
+  # Array Methods:
 
+  ### 1. toString():
+  Converts an array to a string and returns the result. The elements of the array are converted to strings and separated by commas.
 
-Array Methods:
+          Example:
 
-        1. toString(): Converts an array to a string and returns the result. The elements of the array are converted to strings and separated by commas.
+              let fruits = ["Apple", "Banana", "Mango"];
+              let fruitsString = fruits.toString();
+              console.log(fruitsString);
 
-        Example:
 
-            let fruits = ["Apple", "Banana", "Mango"];
-            let fruitsString = fruits.toString();
-            console.log(fruitsString);
+          Output: Apple,Banana,Mango
 
+  ### 2. join():
 
-        Output: Apple,Banana,Mango
+  Creates and returns a new string by concatenating all the elements in an array, separated by a specified separator string. If no separator is provided, a comma (,) is used by default.
 
+          Example 1:
 
-        2. join(): Creates and returns a new string by concatenating all the elements in an array, separated by a specified separator string. If no separator is provided, a comma (,) is used by default.
+              let fruits = ["Apple", "Banana", "Mango"];
+              let fruitsString = fruits.join();
+              console.log(fruitsString);
 
-        Example 1:
+          Output: Apple,Banana,Mango
 
-            let fruits = ["Apple", "Banana", "Mango"];
-            let fruitsString = fruits.join();
-            console.log(fruitsString);
+          Example 2:
 
-        Output: Apple,Banana,Mango
+              let fruits = ["Apple", "Banana", "Mango"];
+              let fruitsString = fruits.join(' and ');
+              console.log(fruitsString);
 
-        Example 2:
+          Output: Apple and Banana and Mango
 
-            let fruits = ["Apple", "Banana", "Mango"];
-            let fruitsString = fruits.join(' and ');
-            console.log(fruitsString);
+  ### 3. pop():
+  Removes the last element from an array. "This method changes the length of the array".
 
-        Output: Apple and Banana and Mango
+          Example 1:
 
+              let fruits = ["Apple", "Banana", "Mango"];
+              let lastFruit = fruits.pop();  // stores the popped element
+              console.log(lastFruit);
+              console.log(fruits);
 
-        3. pop(): Removes the last element from an array. "This method changes the length of the array".
 
-        Example 1:
+          Output:
 
-            let fruits = ["Apple", "Banana", "Mango"];
-            let lastFruit = fruits.pop();  // stores the popped element
-            console.log(lastFruit);
-            console.log(fruits);
+              Mango
+              [ 'Apple', 'Banana' ]
 
+  ### 4. push():
 
-        Output:
+  Adds one or more elements to the end of an array. This method modifies the original array.
 
-            Mango
-            [ 'Apple', 'Banana' ]
+          Example 1:
 
+              let fruits = ["Apple", "Banana"];
+              fruits.push("Mango", "Orange");
+              console.log(fruits);
 
-        4. push(): Adds one or more elements to the end of an array. This method modifies the original array.
+          Output: [ 'Apple', 'Banana', 'Mango', 'Orange' ]
 
-        Example 1:
 
-            let fruits = ["Apple", "Banana"];
-            fruits.push("Mango", "Orange");
-            console.log(fruits);
+          We can even add elements with data types different from the ones in the array.
 
-        Output: [ 'Apple', 'Banana', 'Mango', 'Orange' ]
+          Example:
 
+          let fruits = ["Apple", "Banana"];
+          fruits.push(5);
+          console.log(fruits);
 
-        We can even add elements with data types different from the ones in the array.
+          Output: [ 'Apple', 'Banana', 5 ]
 
-        Example:
+  ### 5. shift():
+  Removes the first element from an array. This method changes the length of the array.
 
-        let fruits = ["Apple", "Banana"];
-        fruits.push(5);
-        console.log(fruits);
+          Example:
 
-        Output: [ 'Apple', 'Banana', 5 ]
+          let fruits = ["Apple", "Banana", "Mango"];
+          fruits.shift();
+          console.log(fruits);
 
 
-        5. shift(): Removes the first element from an array. This method changes the length of the array.
+          Output: [ 'Banana', 'Mango' ]
 
-        Example:
+  ### 6. unshift():
 
-        let fruits = ["Apple", "Banana", "Mango"];
-        fruits.shift();
-        console.log(fruits);
+  Adds one or more elements to the beginning of an array. This method changes the length of the array.
 
 
-        Output: [ 'Banana', 'Mango' ]
+          Example:
 
+          let fruits = ["Banana", "Mango"];
+          fruits.unshift(5 , "Orange");
+          console.log(fruits);
 
-        6. unshift(): Adds one or more elements to the beginning of an array. This method changes the length of the array.
 
+          Output: [ 5, 'Orange', 'Banana', 'Mango' ]
 
-        Example:
+  ### 7. delete:
 
-        let fruits = ["Banana", "Mango"];
-        fruits.unshift(5 , "Orange");
-        console.log(fruits);
+  It is an operator used to remove a property from an object. When applied to an array, it deletes the element at the specified index, but it "does not change the length of the array, leaving undefined at the position of the deleted element".
 
 
-        Output: [ 5, 'Orange', 'Banana', 'Mango' ]
+          Example:
 
+          let fruits = ["Apple", "Banana", "Mango"];
+          delete fruits[1];
+          console.log(fruits);
+          console.log(fruits.length);
 
 
-        7. delete: It is an operator used to remove a property from an object. When applied to an array, it deletes the element at the specified index, but it "does not change the length of the array, leaving undefined at the position of the deleted element".
+          Output:
 
+          [ 'Apple', undefined, 'Mango' ]
+          3
 
-        Example:
+  ### 8. concat():
 
-        let fruits = ["Apple", "Banana", "Mango"];
-        delete fruits[1];
-        console.log(fruits);
-        console.log(fruits.length);
+          Example 1:
 
+          let teamA = ["Alice", "Bob"];
+          let teamB = ["Charlie", "David"];
+          let teamC = ["Eve", "Frank"];
+          let allTeams = teamA.concat(teamB, teamC);
 
-        Output:
+          console.log(allTeams);
 
-        [ 'Apple', undefined, 'Mango' ]
-        3
 
+          Output: [ 'Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank' ]
 
-        8. concat():
 
-        Example 1:
+          Example 2: Concatenating Arrays with Values.
 
-        let teamA = ["Alice", "Bob"];
-        let teamB = ["Charlie", "David"];
-        let teamC = ["Eve", "Frank"];
-        let allTeams = teamA.concat(teamB, teamC);
+          let numbers = [1, 2, 3];
+          let moreNumbers = numbers.concat(4, 5, [6, 7]);
 
-        console.log(allTeams);
+          console.log(moreNumbers);
 
 
-        Output: [ 'Alice', 'Bob', 'Charlie', 'David', 'Eve', 'Frank' ]
+          Output:  [1, 2, 3, 4, 5, 6, 7]
 
 
-        Example 2: Concatenating Arrays with Values.
+  ### 9. sort():
 
-        let numbers = [1, 2, 3];
-        let moreNumbers = numbers.concat(4, 5, [6, 7]);
+  Sorts the elements of an array in place and returns the sorted array. By default, it sorts the elements as strings in ascending order.
 
-        console.log(moreNumbers);
+          Example 1:
 
+          let fruits = ["Banana", "Apple", "Mango", "Orange"];
+          fruits.sort();
+          console.log(fruits);
 
-        Output:  [1, 2, 3, 4, 5, 6, 7]
 
+          Output:  ["Apple", "Banana", "Mango", "Orange"]
 
 
-        9. sort(): Sorts the elements of an array in place and returns the sorted array. By default, it sorts the elements as strings in ascending order.
 
-        Example 1:
+          Example 2:
 
-        let fruits = ["Banana", "Apple", "Mango", "Orange"];
-        fruits.sort();
-        console.log(fruits);
 
+          let numbers = [4, 2, 5, 1, 3];
+          numbers.sort();
+          console.log(numbers);
 
-        Output:  ["Apple", "Banana", "Mango", "Orange"]
 
+          Output: [1, 2, 3, 4, 5]
 
+  ### 10. splice():
 
-        Example 2:
+  It changes the contents of an array by removing, replacing, or adding elements. It modifies the original array.
 
 
-        let numbers = [4, 2, 5, 1, 3];
-        numbers.sort();
-        console.log(numbers);
+          Example 1: Removing elements
 
+          let fruits = ["Banana", "Apple", "Mango", "Orange"];
+          fruits.splice(1, 2);
+          console.log(fruits);
 
-        Output: [1, 2, 3, 4, 5]
 
+          Output: [ 'Banana', 'Orange' ]
 
-        10. splice(): Changes the contents of an array by removing, replacing, or adding elements. It modifies the original array.
 
 
-        Example 1: Removing elements
+          Example 2: Adding elements
 
-        let fruits = ["Banana", "Apple", "Mango", "Orange"];
-        fruits.splice(1, 2);
-        console.log(fruits);
 
+          let fruits = ["Banana", "Orange"];
+          fruits.splice(1, 0, "Apple", "Mango");
+          console.log(fruits);
 
-        Output: [ 'Banana', 'Orange' ]
+          Output: ["Banana", "Apple", "Mango", "Orange"]
 
+  ###
+          Explanation of the above:
 
+          1: The index at which to start adding the new elements.
+          0: Indicates that no elements should be removed.
+          "Apple", "Mango": The elements to add to the array.
 
-        Example 2: Adding elements
 
+          One more example for adding elements:
 
-        let fruits = ["Banana", "Orange"];
-        fruits.splice(1, 0, "Apple", "Mango");
-        console.log(fruits);
+          let fruits = ["Banana", "Orange"];
+          fruits.splice(1, 1, "Apple", "Mango");
+          console.log(fruits);
 
-        Output: ["Banana", "Apple", "Mango", "Orange"]
 
+          Output: [ 'Banana', 'Apple', 'Mango' ]
 
-        Explanation of the above:
 
-        1: The index at which to start adding the new elements.
-        0: Indicates that no elements should be removed.
-        "Apple", "Mango": The elements to add to the array.
+          Explanation:
 
+          1: The index at which to start adding the new elements.
+          1: Indicates that one element, i.e, "Orange" should be removed.
+          "Apple", "Mango": The elements to add to the array.
 
-        One more example for adding elements:
 
-        let fruits = ["Banana", "Orange"];
-        fruits.splice(1, 1, "Apple", "Mango");
-        console.log(fruits);
+          Example 3: Replacing elements
 
+          let fruits = ["Banana", "Apple", "Mango", "Orange"];
+          fruits.splice(1, 2, "Grapes", "Pineapple");
+          console.log(fruits);
 
-        Output: [ 'Banana', 'Apple', 'Mango' ]
+          Output: ["Banana", "Grapes", "Pineapple", "Orange"]
 
+          Explanation:
 
-        Explanation:
+          1: The index at which to start changing the array.
+          2: The number of elements to remove from the array, starting at index 1.
+          "Grapes", "Pineapple": The elements to add to the array, beginning at the start index. If no elements are provided, splice() simply removes the specified elements.
 
-        1: The index at which to start adding the new elements.
-        1: Indicates that one element, i.e, "Orange" should be removed.
-        "Apple", "Mango": The elements to add to the array.
+  ### 11. slice()
 
+  It returns a shallow copy of a portion of an array into a new array object. It does not modify the original array.
 
-        Example 3: Replacing elements
 
-        let fruits = ["Banana", "Apple", "Mango", "Orange"];
-        fruits.splice(1, 2, "Grapes", "Pineapple");
-        console.log(fruits);
+          Example 1:
 
-        Output: ["Banana", "Grapes", "Pineapple", "Orange"]
+          let fruits = ["Banana", "Apple", "Mango", "Orange"];
+          fruits.slice(2, 4);
+          console.log(fruits);
 
-        Explanation:
 
-        1: The index at which to start changing the array.
-        2: The number of elements to remove from the array, starting at index 1.
-        "Grapes", "Pineapple": The elements to add to the array, beginning at the start index. If no elements are provided, splice() simply removes the specified elements.
+          Output: ["Banana", "Apple", "Mango", "Orange"]
 
 
+          Explanation:
 
-        11. slice() method returns a shallow copy of a portion of an array into a new array object. It does not modify the original array.
+          2: The index at which to begin extraction. The default is 0.
+          4: The index at which to end extraction. The default is the array's length. The extraction does not include 4th index.
 
 
-        Example 1:
+          Example 2: Copying the entire array.
 
-        let fruits = ["Banana", "Apple", "Mango", "Orange"];
-        fruits.slice(2, 4);
-        console.log(fruits);
+          let fruits = ["Banana", "Apple", "Mango", "Orange"];
+          let allFruits = fruits.slice();
+          console.log(allFruits);
 
+          Output: ["Banana", "Apple", "Mango", "Orange"]
 
-        Output: ["Banana", "Apple", "Mango", "Orange"]
+  ### 12. reverse()
 
 
-        Explanation:
+          Example:
 
-        2: The index at which to begin extraction. The default is 0.
-        4: The index at which to end extraction. The default is the array's length. The extraction does not include 4th index.
+          let fruits = ["Banana", "Apple", "Mango", "Orange"];
+          fruits.reverse();
+          console.log(fruits);
 
-
-        Example 2: Copying the entire array.
-
-        let fruits = ["Banana", "Apple", "Mango", "Orange"];
-        let allFruits = fruits.slice();
-        console.log(allFruits);
-
-        Output: ["Banana", "Apple", "Mango", "Orange"]
-
-
-        12. reverse()
-
-
-        Example:
-
-        let fruits = ["Banana", "Apple", "Mango", "Orange"];
-        fruits.reverse();
-        console.log(fruits);
-
-        Output: ["Orange", "Mango", "Apple", "Banana"]
+          Output: ["Orange", "Mango", "Apple", "Banana"]
