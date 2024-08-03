@@ -5,4 +5,8 @@
 
 // document.getElementById("two").style.backgroundColor = "red";
 
-document.querySelectorAll(".box")[1].style.backgroundColor = "red";
+// document.querySelectorAll(".box")[1].style.backgroundColor = "red";
+
+document.querySelectorAll(".box").forEach( e => {
+    e.style.backgroundColor = "yellow";
+});
