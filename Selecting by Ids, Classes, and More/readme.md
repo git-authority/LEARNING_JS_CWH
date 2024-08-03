@@ -53,6 +53,25 @@ This code will select all p elements with the class text and change their text c
 
 Using for each loop to access each element. We have to use for loop, could've also used normal for loops or other for loops.
 
+##
+
+### Note : We can also select a specific element inside a container using document.querySelectorAll
+
+Example:
+
+    <!-- HTML -->
+    <div class="container">
+        <p>First paragraph</p>
+        <p>Second paragraph</p>
+    </div>
+
+    <!-- JavaScript -->
+    let secondParagraph = document.querySelectorAll('.container p')[1];
+    secondParagraph.style.color = 'green';
+
+
+This code will specifically target the second paragraph inside the container div and change its text color to green.
+
 ## 4. document.getElementsByTagName
 
 Returns elements with the given tag name.
