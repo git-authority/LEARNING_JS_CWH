@@ -1,13 +1,14 @@
-Example 1:
+## 1. Functions:
+
+### Example 1:
 
     function sayHello() {
         console.log("Hello, World!");
     }
     sayHello(); // Calls the function
 
--------------------------------------------------
 
-Example 2:
+### Example 2:
 
     function add(a, b) {
         return a + b;
@@ -17,9 +18,9 @@ Example 2:
 
 
 
-Arrow Functions: (need to use semicolon at the end of functions after '}' )
+## 2. Arrow Functions: (need to use semicolon at the end of functions after '}' )
 
-    Equivalent of first example:
+### Equivalent of first example:
 
         const sayHello = () => {
         console.log("Hello, World!");
@@ -28,7 +29,7 @@ Arrow Functions: (need to use semicolon at the end of functions after '}' )
     sayHello(); // Calls the function
 
 
-    Equivalent of second example:
+### Equivalent of second example:
 
 
         const add = (a, b) => {
