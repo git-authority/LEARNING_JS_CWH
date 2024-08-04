@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
+    <!-- <style>
         .box{
             height: 34px;
             width: 34px;
@@ -12,16 +12,15 @@
             padding: 34px;
             border: 2px solid black;
         }
-    </style>
-    <script src="script.js"></script>
+    </style> -->
 </head>
 <body>
     <div class="container">
-        <div class="box">Bhupendra Jogi</div>
-        <div class="box" id="two">Bhupendra Jogi</div>
-        <div class="box">Bhupendra Jogi</div>
-        <div class="box">Bhupendra Jogi</div>
-        <div class="box">Bhupendra Jogi</div>
+        <div class="box">This is a Box.</div>
+        <div class="fun">Fun</div>
     </div>
+    <script>
+        console.log(document.querySelector(".container").textContent);
+    </script>
 </body>
 </html>
