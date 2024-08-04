@@ -4,23 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <style>
-        .box{
+    <style>
+        .container{
             height: 34px;
             width: 34px;
             margin: 34px;
             padding: 34px;
             border: 2px solid black;
         }
-    </style> -->
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="box">This is a Box.</div>
-        <div class="fun">Fun</div>
-    </div>
+
+    <div id="myDiv" class="class1 class2">Hello</div>
+
     <script>
-        console.log(document.querySelector(".container").textContent);
+        const myDiv = document.getElementById('myDiv');
+
+        myDiv.classList.add("class3"); // Adds "class3"
+        console.log(myDiv.className); // Outputs: "class1 class2 class3"
+
+        myDiv.classList.remove("class1"); // Removes "class1"
+        console.log(myDiv.className); // Outputs: "class2 class3"
+
+        myDiv.classList.toggle("class3"); // Toggles "class3" (removes it)
+        console.log(myDiv.className); // Outputs: "class2"
     </script>
+
+
 </body>
 </html>
